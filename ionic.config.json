@@ -1,0 +1,8 @@
+{
+  "name": "WooIonic",
+  "app_id": "de97e764",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
+}
