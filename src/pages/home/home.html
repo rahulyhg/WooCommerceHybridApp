@@ -8,11 +8,25 @@
 </ion-header>
 
 <ion-content padding>
-  <h3>Ionic Menu Starter</h3>
+  <ion-card>
+    <ion-slides autoplay="3000" pager>
+      <ion-slide *ngFor="let n of [1,2,3,4]">
+        <img src="./assets/imgs/{{n}}.jpg" alt="">
+      </ion-slide>
+    </ion-slides>
+  </ion-card>
 
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will show you the way.
-  </p>
-
-  <button ion-button secondary menuToggle>Toggle Menu</button>
+  <ion-grid>
+    <ion-row>
+      <ion-slides #productSlides>
+        <ion-slide *ngFor="let product of products">
+          <ion-card no-padding>
+            <img [src]="product.featured_src" alt="">
+            <h1 padding center>{{product.title}}</h1>
+            <p center padding [innerHTML]="product.description"></p>
+          </ion-card>
+        </ion-slide>
+      </ion-slides>
+    </ion-row>
+  </ion-grid>
 </ion-content>

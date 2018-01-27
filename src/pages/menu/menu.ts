@@ -6,7 +6,7 @@ import { HomePage } from '../home/home'
   templateUrl: 'menu.html',
 })
 export class Menu {
-  homePage: Component;
+  homePage: any;
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     this.homePage = HomePage;
   }
